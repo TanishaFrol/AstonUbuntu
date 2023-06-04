@@ -1,3 +1,5 @@
+package app;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +11,11 @@ import java.io.IOException;
 public class AppServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().printf("<h1>Hello</h1>");
+        resp.setContentType("text/html;charset=UTF-8");
+        resp.getWriter().printf("<html><body>");
+        resp.getWriter().printf("<h1>How do you do</h1>");
+        resp.getWriter().printf("</body></html>");
+        resp.getWriter().close();
     }
     @Override
     public void init() throws ServletException {

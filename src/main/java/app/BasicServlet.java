@@ -1,3 +1,5 @@
+package app;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
@@ -8,7 +10,6 @@ public class BasicServlet implements Servlet {
     private transient ServletConfig config;
     @Override
     public void init(ServletConfig config) throws ServletException {
-
         this.config = config;
     }
     @Override
