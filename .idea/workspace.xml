@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9886d3a-0b2f-4ae8-966d-7b99333895ff" name="Changes" comment="commit 1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/AppServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AppServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Tanyusha/IdeaProjects/AstonUbuntu",
+    "last_opened_file_path": "/home/tanisha/projects/AstonUbuntu-master",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
