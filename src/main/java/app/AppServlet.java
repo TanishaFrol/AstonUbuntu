@@ -17,6 +17,8 @@ public class AppServlet extends HttpServlet {
         resp.getWriter().printf("<h1>No one I know could ever keep up with you</h1>");
         resp.getWriter().printf("<h1>How do you do?</h1>");
         resp.getWriter().printf("<h1>Did it ever make sense to you to say bye? (Bye bye)</h1>");
+        resp.getWriter().printf("<h1>I see you in that chair with perfect skin</h1>");
+        resp.getWriter().printf("<h1>Well, how have you been, baby, livin′ in sin?</h1>");
         resp.getWriter().printf("</body></html>");
         resp.getWriter().close();
     }
