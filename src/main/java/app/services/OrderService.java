@@ -8,10 +8,8 @@ import java.util.List;
 
 
 public class OrderService {
-
     private OrderRepository orderRepo;
     public List<Order> getOrderList() {
         return (List<Order>) orderRepo.findAll();
     }
-
 }
