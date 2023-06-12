@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9886d3a-0b2f-4ae8-966d-7b99333895ff" name="Changes" comment="commit 13.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Size.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/MaterialRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/SizeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/TypeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/db_changelog/ddl/0.0.1.create_tables_orders.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/resources/db_changelog/dml/0.0.1.insert_data_orders.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/AppServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AppServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/OrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +58,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Tanyusha/IdeaProjects/SpringFramework/Spring_Lesson_2",
+    "last_opened_file_path": "C:/Users/Tanyusha/IdeaProjects/AstonUbuntu/src/main/java/resources/db_changelog",
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\resources\db_changelog\" />
+      <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\resources\" />
+      <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\resources" />
       <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\app" />
       <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\app\data" />
     </key>
@@ -174,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686001896206</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit 13.0">
+      <created>1686572119216</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686572119216</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
