@@ -27,6 +27,8 @@ public class AppServlet extends HttpServlet {
         resp.getWriter().printf("</body></html>");
         resp.getWriter().close();
     }
+
+
     @Override
     public void init() throws ServletException {
     }

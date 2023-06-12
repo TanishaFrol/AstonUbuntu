@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9886d3a-0b2f-4ae8-966d-7b99333895ff" name="Changes" comment="commit 11.0" />
+    <list default="true" id="c9886d3a-0b2f-4ae8-966d-7b99333895ff" name="Changes" comment="commit 13.0">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Material.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Size.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/data/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/MaterialRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/SizeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/repositories/TypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/AppServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AppServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +36,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -29,18 +61,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/tanisha/projects/AstonUbuntu-master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Tanyusha/IdeaProjects/SpringFramework/Spring_Lesson_2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\app" />
+      <recent name="C:\Users\Tanyusha\IdeaProjects\AstonUbuntu\src\main\java\app\data" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="app" />
+      <recent name="app.data" />
     </key>
   </component>
   <component name="RunManager">
@@ -130,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686001709926</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit 12.0">
+      <created>1686001896206</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686001896206</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +196,8 @@
     <MESSAGE value="commit 9.0" />
     <MESSAGE value="commit 10.0" />
     <MESSAGE value="commit 11.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 11.0" />
+    <MESSAGE value="commit 12.0" />
+    <MESSAGE value="commit 13.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 13.0" />
   </component>
 </project>
