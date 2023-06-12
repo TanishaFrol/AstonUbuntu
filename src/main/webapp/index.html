@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
+    <script src="order.js"></script>
+</head>
+
+<body ng-controller="indexController">
+    <div class="content-container">
+        <div class="header">
+            <button>Разместить объявление</button>
+            <button>Вход и регистрация</button>
+        </div>
+        <div class="context">
+            <div class="logo_line">
+                <div class="logo">
+                    <img class="img" src="img/logo-png.png" alt="picture" width="250">
+                </div>
+                <div class="label">Sew</div>
+            </div>
+            <div class="list">
+                <div class="order_list">
+                    <ul class="item" ng-repeat="o in OrdersList">
+                        <li class="orderNumber_text">{{o.productType}}
+                            <ul class="ul_text">
+
+                                <li>Количество единиц: <span class="li_text">{{o.units}}</span></li>
+                                <li>Сроки: <span class="li_text">{{o.deadlines}}</span></li>
+                                <li>Материал: <span class="li_text">{{o.material}}</span></li>
+                                <li>Оборудование: <span class="li_text">{{o.equipment}}</span></li>
+                                <li>Размерный ряд: <span class="li_text">{{o.size}}</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="footer">
+            <img class="img" src="img/sew.jpg" alt="picture" width="150">
+            <div class="label">Sew</div>
+            <button>Поддержка</button>
+        </div>
+    </div>
+</body>
+
+</html>

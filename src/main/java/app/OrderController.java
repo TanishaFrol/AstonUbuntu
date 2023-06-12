@@ -2,7 +2,7 @@ package app;
 
 import app.data.Order;
 import app.services.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @WebServlet(name = "OrderServlet", urlPatterns = "/order")
 public class OrderController extends HttpServlet {
-    @Autowired
+
     OrderService orderService;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -35,7 +35,8 @@ public class Order {
             inverseJoinColumns = @JoinColumn(name = "sizes_id"))
     private Set<Size> sizes = new LinkedHashSet<>();
 
-    public Order(int units, Type productType, Material material, String deadlines, Set<Size> sizes) {
+    public Order(long id, int units, Type productType, Material material, String deadlines, Set<Size> sizes) {
+        this.id = id;
         this.units = units;
         this.productType = productType;
         this.material = material;
