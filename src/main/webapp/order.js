@@ -1,5 +1,5 @@
 angular.module('app', []).controller('indexController', function ($scope, $http) {
-const contextPath = 'http://localhost:8185/AstonUbuntu';
+const contextPath = 'http://localhost:8085/AstonUbuntu';
 
     $scope.loadOrders = function () {
         $http.get(contextPath + '/order')

@@ -1,6 +1,4 @@
 package app.repositories;
-
-
 import app.data.Material;
 import app.data.Order;
 import app.data.Size;
@@ -21,7 +19,7 @@ public class OrderRepository {
         List<Order> orderList = new ArrayList<>();
 
         Connection connection = null;
-        String url = "jdbc:postgresql://127.0.0.1:32/AstonTraining";
+        String url = "jdbc:postgresql://127.0.0.1:5433/AstonTraining";
         String name = "postgres";
         String password = "password";
         statementStr.append("select orders.id, orders.units, orders.deadlines, ")
