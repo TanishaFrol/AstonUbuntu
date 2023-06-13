@@ -21,7 +21,7 @@ public class OrderController extends HttpServlet {
         resp.setContentType("text/html;charset=UTF-8");
         resp.getWriter().printf("<html><body>");
         resp.getWriter().printf("<h1>Order list</h1>");
-        resp.getWriter().printf(String.valueOf(getOrderList()));
+        resp.getWriter().printf("<h1>" + String.valueOf(getOrderList()) + "/h1");
         resp.getWriter().printf("</body></html>");
         resp.getWriter().close();
     }
