@@ -15,7 +15,7 @@ import java.util.List;
 @WebServlet(name = "OrderServlet", urlPatterns = "/order")
 public class OrderController extends HttpServlet {
 
-    OrderService orderService;
+    OrderService orderService = new OrderService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");

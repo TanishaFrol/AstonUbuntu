@@ -1,3 +1,4 @@
+import app.OrderController;
 import app.repositories.OrderRepository;
 import app.services.OrderService;
 
@@ -9,8 +10,10 @@ public class JDBCtest {
 
     public static void main(String[] args) {
         OrderRepository orderRepository = new OrderRepository();
-        testConnection();
-        System.out.println(orderRepository.findAll());
+        OrderController orderController = new OrderController();
+        /*testConnection();
+        System.out.println(orderRepository.findAll());*/
+        System.out.println(orderController.getOrderList());
     }
 
     private static void testConnection() {
