@@ -16,11 +16,15 @@ public class JDBCtest {
     private static void testConnection() {
         Connection connection = null;
         //URL к базе состоит из протокола:подпротокола://[хоста]:[порта_СУБД]/[БД] и других_сведений
-        String url = "jdbc:postgresql://127.0.0.1:5432/AstonTraining";
+       /* String url = "jdbc:postgresql://127.0.0.1:5432/AstonTraining";
         //Имя пользователя БД
         String name = "postgres";
         //Пароль
-        String password = "password";
+        String password = "password";*/
+        String url = "jdbc:postgresql://127.0.0.1/tester";
+        String name = "postgres";
+        String password = "new_password";
+
         try {
             //Загружаем драйвер
             Class.forName("org.postgresql.Driver");

@@ -19,9 +19,9 @@ public class OrderRepository {
         List<Order> orderList = new ArrayList<>();
 
         Connection connection = null;
-        String url = "jdbc:postgresql://10.0.2.15:5432/tester";
-        String name = "tester";
-        String password = "tanytanytany94";
+        String url = "jdbc:postgresql://127.0.0.1:5432/tester";
+        String name = "postgres";
+        String password = "new_password";
         statementStr.append("select orders.id, orders.units, orders.deadlines, ")
                 .append("material.id as material_id, material.title as material_title, ")
                 .append("types.id as type_id, types.title as type_title, ")
