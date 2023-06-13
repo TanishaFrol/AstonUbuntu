@@ -25,4 +25,14 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
     <servlet-name>BasicServlet</servlet-name>
     <url-pattern>/basic_servlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+  <servlet-name>OrderServlet</servlet-name>
+  <servlet-class>app.OrderController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  <servlet-name>OrderServlet</servlet-name>
+  <url-pattern>/order</url-pattern>
+  </servlet-mapping>
 </web-app>
