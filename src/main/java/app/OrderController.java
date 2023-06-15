@@ -23,7 +23,7 @@ public class OrderController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-        List<JSONObject> jsonList = new ArrayList<>();
+        /*List<JSONObject> jsonList = new ArrayList<>();
 
         for (OrderDTO o:getOrderList()) {
             JSONObject jsonObject = new JSONObject();
@@ -37,12 +37,13 @@ public class OrderController extends HttpServlet {
             jsonList.add(jsonObject);
 
         }
-        jsonList.get(0).write(resp.getWriter());
-        //resp.setContentType("text/html;charset=UTF-8");
+        jsonList.get(0).write(resp.getWriter());*/
+
+
+        resp.setContentType("text/html;charset=UTF-8");
+        resp.getWriter().write(String.valueOf(getOrderList()));
         /*resp.getWriter().printf("<html><body>");
         resp.getWriter().printf("<h1>Order list</h1>");*/
-        //resp.getWriter().print(getOrderList());
-
         //resp.getWriter().printf(getOrderList().toString());
         /*resp.getWriter().printf("</body></html>");*/
         resp.getWriter().close();
