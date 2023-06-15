@@ -24,9 +24,9 @@ public class OrderController extends HttpServlet {
 
 
         List<JSONObject> jsonList = new ArrayList<>();
-        JSONObject jsonObject = new JSONObject();
-        for (OrderDTO o:getOrderList()) {
 
+        for (OrderDTO o:getOrderList()) {
+            JSONObject jsonObject = new JSONObject();
 
             jsonObject.append("id", o.getId())
                     .append("units", o.getUnits())
@@ -37,11 +37,11 @@ public class OrderController extends HttpServlet {
             jsonList.add(jsonObject);
 
         }
-        jsonObject.write(resp.getWriter());
-        resp.setContentType("text/html;charset=UTF-8");
+        jsonList.get(0).write(resp.getWriter());
+        //resp.setContentType("text/html;charset=UTF-8");
         /*resp.getWriter().printf("<html><body>");
         resp.getWriter().printf("<h1>Order list</h1>");*/
-        resp.getWriter().print(getOrderList());
+        //resp.getWriter().print(getOrderList());
 
         //resp.getWriter().printf(getOrderList().toString());
         /*resp.getWriter().printf("</body></html>");*/
