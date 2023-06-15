@@ -1,6 +1,6 @@
 package app;
 
-import app.data.Order;
+import app.dto.OrderDTO;
 import app.services.OrderService;
 
 
@@ -26,8 +26,8 @@ public class OrderController extends HttpServlet {
         resp.getWriter().close();
     }
 
-    public List<Order> getOrderList(){
-        List<Order> orderList = orderService.getOrderList();
+    public List<OrderDTO> getOrderList(){
+        List<OrderDTO> orderList = orderService.getOrderList();
         return orderList;
     }
 

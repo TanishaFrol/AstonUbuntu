@@ -1,6 +1,8 @@
 package app.services;
 
+import app.converters.OrderConverter;
 import app.data.Order;
+import app.dto.OrderDTO;
 import app.repositories.OrderRepository;
 
 import java.util.List;
@@ -9,7 +11,10 @@ import java.util.List;
 
 public class OrderService {
     private OrderRepository orderRepo = new OrderRepository();
-    public List<Order> getOrderList() {
-        return (List<Order>) orderRepo.findAll();
+    private OrderConverter orderConverter = new OrderConverter();
+    public List<OrderDTO> getOrderList() {
+
+        List<Order> orderList = (List<Order>) orderRepo.findAll();
+        return orderConverter.entityToDto(orderList);
     }
 }
