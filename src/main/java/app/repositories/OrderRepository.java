@@ -14,7 +14,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class OrderRepository {
-    ConnectionToDB connectionToDB = new ConnectionToDB();
 
     @Transactional
     public List<Order> findAll() {
@@ -29,6 +28,7 @@ public class OrderRepository {
                 .append("from orders ")
                 .append("inner join material on orders.material_id = material.id ")
                 .append("inner join types on orders.type_id = types.id ");
+        ConnectionToDB connectionToDB = new ConnectionToDB();
         ResultSet result2 = connectionToDB.connect(String.valueOf(statementStr2));
         try {
             while (result2.next()) {
@@ -50,6 +50,7 @@ public class OrderRepository {
         statementStr1.append("select orders_sizes.orders_id as order_id, orders_sizes.sizes_id as size_id, size.title as size ")
                 .append("from orders_sizes ")
                 .append("inner join size on size.id = orders_sizes.sizes_id ");
+        ConnectionToDB connectionToDB = new ConnectionToDB();
         ResultSet result1 = connectionToDB.connect(String.valueOf(statementStr1));
         Map<Long, HashSet> sizeMap = new HashMap<>();
         try {
