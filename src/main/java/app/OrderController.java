@@ -18,11 +18,11 @@ public class OrderController extends HttpServlet {
     OrderService orderService = new OrderService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
+        /*resp.setContentType("text/html;charset=UTF-8");
         resp.getWriter().printf("<html><body>");
-        resp.getWriter().printf("<h1>Order list</h1>");
-        resp.getWriter().printf("<h1>" + String.valueOf(getOrderList()) + "/h1");
-        resp.getWriter().printf("</body></html>");
+        resp.getWriter().printf("<h1>Order list</h1>");*/
+        resp.getWriter().printf(getOrderList().toString());
+        /*resp.getWriter().printf("</body></html>");*/
         resp.getWriter().close();
     }
 
