@@ -28,11 +28,21 @@ public class OrderDTO {
 
     @Override
     public String toString() {
-        return "{   \"id\": " + id + ",\n\"units\": " + units + ",\n\"productType\": \"" + productType + "\",\n\"material\": \"" + material + "\",\n\"deadlines\": \"" + deadlines + "\",\n\"size\": \"" + size + "\"}";
+        StringBuilder str = new StringBuilder();
+        str.append("\n{\n")
+            .append("\"id\": " + id + ", \n")
+            .append("\"units\": " + units + ", \n")
+            .append("\"productType\": \"" + productType + "\", \n")
+            .append("\"material\": \"" + material + "\", \n")
+            .append("\"deadlines\": \"" + deadlines + "\", \n")
+            .append("\"size\": \"" + size + "\", \n")
+            .append("} ");
+        return str.toString();
     }
 
 
     private String sizeRangeToString(Set<Size> sizeRange) {
+
         List<Size> sortedSizeRange = sizeRange.stream().sorted(new Comparator<Size>() {
             @Override
             public int compare(Size o1, Size o2) {
@@ -41,6 +51,9 @@ public class OrderDTO {
                 else return 0;
             }
         }).collect(Collectors.toList());
+        if (sizeRange.size() == 1) {
+            return "[ " + sortedSizeRange.get(0).getTitle() + " ]";
+        }
         StringBuilder str = new StringBuilder();
         str.append("[ ").append(sortedSizeRange.get(0).getTitle()).append(" - ").append(sortedSizeRange.get(sortedSizeRange.size() - 1).getTitle()).append(" ]");
         return str.toString();
