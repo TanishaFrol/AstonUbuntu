@@ -36,7 +36,7 @@ public class ConnectionToDB {
                     Logger.getLogger(OrderService.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+            return result;
         }
-        return result;
     }
 }
