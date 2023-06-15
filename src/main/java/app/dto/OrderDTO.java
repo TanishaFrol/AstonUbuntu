@@ -4,11 +4,13 @@ import app.converters.MaterialConverter;
 import app.converters.TypeConverter;
 import app.data.Order;
 import app.data.Size;
+import lombok.Data;
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-
+@Data
 public class OrderDTO {
     private Long id;
     private int units;
