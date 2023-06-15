@@ -25,7 +25,7 @@ public class ConnectionToDB {
             connection = DriverManager.getConnection(url, name, password);
             Statement statement = connection.createStatement();
             result = statement.executeQuery(statementStr);
-
+            return result;
         } catch (Exception ex) {
             Logger.getLogger(OrderService.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
