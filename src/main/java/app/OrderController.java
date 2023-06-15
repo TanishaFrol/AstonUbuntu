@@ -20,11 +20,11 @@ public class OrderController extends HttpServlet {
     OrderService orderService = new OrderService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        JSONObject jsonObject =  new JSONObject(getOrderList());
+        //JSONObject jsonObject = new JSONObject(getOrderList());
         resp.setContentType("text/html;charset=UTF-8");
         /*resp.getWriter().printf("<html><body>");
         resp.getWriter().printf("<h1>Order list</h1>");*/
-        resp.getWriter().print(jsonObject);
+        resp.getWriter().print(getOrderList());
         //resp.getWriter().printf(getOrderList().toString());
         /*resp.getWriter().printf("</body></html>");*/
         resp.getWriter().close();
