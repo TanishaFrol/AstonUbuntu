@@ -2,9 +2,11 @@ import app.OrderController;
 import app.dto.OrderDTO;
 import app.repositories.OrderRepository;
 import app.services.OrderService;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,10 +16,11 @@ import java.util.logging.Logger;
 public class JDBCtest {
 
     public static void main(String[] args) {
-        OrderRepository orderRepository = new OrderRepository();
         OrderController orderController = new OrderController();
-        testConnection();
-        System.out.println(orderRepository.findAll());
+        //testConnection();
+
+        List<OrderDTO> orderList = orderController.getOrderList();
+        System.out.println(orderList);
     }
 
     private static void testConnection() {

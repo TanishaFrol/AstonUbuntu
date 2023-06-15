@@ -19,6 +19,8 @@ import java.util.List;
 public class OrderController extends HttpServlet {
 
     OrderService orderService = new OrderService();
+    private List<OrderDTO> orderList;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -50,7 +52,10 @@ public class OrderController extends HttpServlet {
     }
 
     public List<OrderDTO> getOrderList(){
-        List<OrderDTO> orderList = orderService.getOrderList();
+        /*if (orderList.isEmpty()) {
+
+        }*/
+        orderList = orderService.getOrderList();
         return orderList;
     }
 
