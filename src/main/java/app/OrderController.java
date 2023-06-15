@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "OrderServlet", urlPatterns = "/order")
@@ -20,11 +21,28 @@ public class OrderController extends HttpServlet {
     OrderService orderService = new OrderService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        JSONObject jsonObject = new JSONObject(getOrderList());
+
+
+        List<JSONObject> jsonList = new ArrayList<>();
+        JSONObject jsonObject = new JSONObject();
+        for (OrderDTO o:getOrderList()) {
+
+
+            jsonObject.append("id", o.getId())
+                    .append("units", o.getUnits())
+                    .append("productType", o.getProductType())
+                    .append("material", o.getMaterial())
+                    .append("deadlines", o.getDeadlines())
+                    .append("size", o.getSize());
+            jsonList.add(jsonObject);
+
+        }
+        jsonObject.write(resp.getWriter());
         resp.setContentType("text/html;charset=UTF-8");
         /*resp.getWriter().printf("<html><body>");
         resp.getWriter().printf("<h1>Order list</h1>");*/
         resp.getWriter().print(getOrderList());
+
         //resp.getWriter().printf(getOrderList().toString());
         /*resp.getWriter().printf("</body></html>");*/
         resp.getWriter().close();
