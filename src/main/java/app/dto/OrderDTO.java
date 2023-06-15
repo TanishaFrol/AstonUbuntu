@@ -28,7 +28,7 @@ public class OrderDTO {
 
     @Override
     public String toString() {
-        return "Order{" + id + " " + units + " " + productType + " " + material + " " + deadlines + " " + size + "}";
+        return "{   \"id\": " + id + ",\n\"units\": " + units + ",\n\"productType\": \"" + productType + "\",\n\"material\": \"" + material + "\",\n\"deadlines\": \"" + deadlines + "\",\n\"size\": \"" + size + "\"}";
     }
 
 
