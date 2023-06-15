@@ -23,25 +23,6 @@ public class OrderController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-        /*List<JSONObject> jsonList = new ArrayList<>();
-
-        for (OrderDTO o:getOrderList()) {
-            JSONObject jsonObject = new JSONObject();
-
-            jsonObject.append("id", o.getId())
-                    .append("units", o.getUnits())
-                    .append("productType", o.getProductType())
-                    .append("material", o.getMaterial())
-                    .append("deadlines", o.getDeadlines())
-                    .append("size", o.getSize());
-            jsonList.add(jsonObject);
-
-        }
-        jsonList.get(0).write(resp.getWriter());*/
-
-
         resp.setContentType("text/html;charset=UTF-8");
         resp.getWriter().write(String.valueOf(getOrderList()));
         /*resp.getWriter().printf("<html><body>");
@@ -52,10 +33,9 @@ public class OrderController extends HttpServlet {
     }
 
     public List<OrderDTO> getOrderList(){
-        /*if (orderList.isEmpty()) {
-
-        }*/
-        orderList = orderService.getOrderList();
+        if (orderList == null) {
+            orderList = orderService.getOrderList();
+        }
         return orderList;
     }
 

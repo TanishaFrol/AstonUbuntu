@@ -27,10 +27,9 @@ public class ConnectionToDB {
         }
     }
 
-    Connection connection = null;
-    ResultSet result = null;
-
     public ResultSet connect(String statementStr) {
+        Connection connection = null;
+        ResultSet result = null;
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, name, password);
