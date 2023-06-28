@@ -12,9 +12,9 @@ import java.util.List;
 public class OrderService {
     private OrderRepository orderRepo = new OrderRepository();
     private OrderConverter orderConverter = new OrderConverter();
-    public List<OrderDTO> getOrderList() {
-
-        List<Order> orderList = (List<Order>) orderRepo.findAll();
-        return orderConverter.entityToDto(orderList);
+    public List<String> getOrderList() {
+        List<Order> orderList = orderRepo.findAll();
+        System.out.println(orderList);
+        return orderConverter.DtoToJSON(orderList);
     }
 }

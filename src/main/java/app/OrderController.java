@@ -3,6 +3,7 @@ package app;
 import app.dto.OrderDTO;
 import app.services.OrderService;
 import netscape.javascript.JSObject;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONObject;
 
 
@@ -17,10 +18,7 @@ import java.util.List;
 
 @WebServlet(name = "OrderServlet", urlPatterns = "/order")
 public class OrderController extends HttpServlet {
-
     OrderService orderService = new OrderService();
-    private List<OrderDTO> orderList;
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
@@ -32,12 +30,8 @@ public class OrderController extends HttpServlet {
         resp.getWriter().close();
     }
 
-    public List<OrderDTO> getOrderList(){
-        /*if (orderList == null) {
-
-        }*/
-        orderList = orderService.getOrderList();
-        return orderList;
+    public List<String> getOrderList(){
+        return orderService.getOrderList();
     }
 
     @Override

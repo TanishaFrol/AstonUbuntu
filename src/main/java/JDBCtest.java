@@ -19,10 +19,6 @@ public class JDBCtest {
         OrderController orderController = new OrderController();
         //testConnection();
 
-        //List<OrderDTO> orderList = orderController.getOrderList();
-        System.out.println(orderController.getOrderList());
-        System.out.println(orderController.getOrderList());
-        Thread.sleep(500);
         System.out.println(orderController.getOrderList());
     }
 

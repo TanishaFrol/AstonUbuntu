@@ -28,21 +28,6 @@ public class OrderDTO {
         this.size = sizeRangeToString(order.getSizes());
     }
 
-    @Override
-    public String toString() {
-        StringBuilder str = new StringBuilder();
-        str.append("\n{\n")
-            .append("\"id\": " + id + ", \n")
-            .append("\"units\": " + units + ", \n")
-            .append("\"productType\": \"" + productType + "\", \n")
-            .append("\"material\": \"" + material + "\", \n")
-            .append("\"deadlines\": \"" + deadlines + "\", \n")
-            .append("\"size\": \"" + size + "\", \n")
-            .append("} ");
-        return str.toString();
-    }
-
-
     private String sizeRangeToString(Set<Size> sizeRange) {
 
         List<Size> sortedSizeRange = sizeRange.stream().sorted(new Comparator<Size>() {
