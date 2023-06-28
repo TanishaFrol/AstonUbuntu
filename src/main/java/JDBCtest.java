@@ -15,12 +15,15 @@ import java.util.logging.Logger;
 
 public class JDBCtest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         OrderController orderController = new OrderController();
         //testConnection();
 
-        List<OrderDTO> orderList = orderController.getOrderList();
-        System.out.println(orderList);
+        //List<OrderDTO> orderList = orderController.getOrderList();
+        System.out.println(orderController.getOrderList());
+        System.out.println(orderController.getOrderList());
+        Thread.sleep(500);
+        System.out.println(orderController.getOrderList());
     }
 
     private static void testConnection() {

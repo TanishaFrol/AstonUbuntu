@@ -33,9 +33,10 @@ public class OrderController extends HttpServlet {
     }
 
     public List<OrderDTO> getOrderList(){
-        if (orderList == null) {
-            orderList = orderService.getOrderList();
-        }
+        /*if (orderList == null) {
+
+        }*/
+        orderList = orderService.getOrderList();
         return orderList;
     }
 

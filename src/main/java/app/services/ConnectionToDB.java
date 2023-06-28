@@ -15,7 +15,7 @@ public class ConnectionToDB {
         try {
             FileInputStream fis;
             Properties properties = new Properties();
-            fis = new FileInputStream("src/main/resources/config.properties");
+            fis = new FileInputStream(getClass().getClassLoader().getResource("config.properties").getFile());
             properties.load(fis);
             String url = properties.getProperty("db.host");
             String name = properties.getProperty("db.login");
