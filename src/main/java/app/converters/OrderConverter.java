@@ -2,12 +2,13 @@ package app.converters;
 
 import app.data.Order;
 import app.dto.OrderDTO;
+import app.repositories.OrderRepository;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class OrderConverter {
     public List<String> DtoToJSON (List<Order> orderList) {
@@ -19,7 +20,7 @@ public class OrderConverter {
                 jsonList.add(objectMapper.writeValueAsString(orderDTOList.get(i)));
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                Logger.getLogger(OrderConverter.class.getName()).log(Level.SEVERE, null, e);
             }
         return jsonList;
     }

@@ -1,15 +1,5 @@
 import app.OrderController;
-import app.dto.OrderDTO;
-import app.repositories.OrderRepository;
-import app.services.OrderService;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,7 +7,6 @@ public class JDBCtest {
 
     public static void main(String[] args) throws InterruptedException {
         OrderController orderController = new OrderController();
-        //testConnection();
 
         System.out.println(orderController.getOrderList());
     }

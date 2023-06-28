@@ -7,7 +7,6 @@ import app.data.Type;
 import app.services.ConnectionToDB;
 import app.services.OrderService;
 import jakarta.transaction.Transactional;
-
 import java.sql.*;
 import java.util.*;
 import java.util.logging.Level;
@@ -15,21 +14,18 @@ import java.util.logging.Logger;
 
 public class OrderRepository {
 
+    private Map<Long, HashSet> sizeMap;
+    private List<Order> orderList;
+
     @Transactional
     public List<Order> findAll() {
 
-        List<Order> orderList = new ArrayList<>();
-        Map<Long, HashSet> sizeMap = createSizeMapForOrderList();
+        orderList = new ArrayList<>();
+        sizeMap = createSizeMapForOrderList();
 
-        StringBuilder statementStr2 = new StringBuilder();
-        statementStr2.append("select orders.id, orders.units, orders.deadlines, ")
-                .append("material.id as material_id, material.title as material_title, ")
-                .append("types.id as type_id, types.title as type_title ")
-                .append("from orders ")
-                .append("inner join material on orders.material_id = material.id ")
-                .append("inner join types on orders.type_id = types.id ");
+        String statement = createStatementForOrderList();
         ConnectionToDB connectionToDB = new ConnectionToDB();
-        ResultSet result2 = connectionToDB.connect(String.valueOf(statementStr2));
+        ResultSet result2 = connectionToDB.connect(String.valueOf(statement));
         try {
             while (result2.next()) {
                 Long orderID = result2.getLong("id");
@@ -40,19 +36,18 @@ public class OrderRepository {
                 orderList.add(new Order(orderID, orderUnits, orderType, orderMaterial, orderDeadline, sizeMap.get(orderID)));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.getLogger(OrderRepository.class.getName()).log(Level.SEVERE, null, e);
         }
         return orderList;
     }
 
     private Map<Long, HashSet> createSizeMapForOrderList() {
-        StringBuilder statementStr1 = new StringBuilder();
-        statementStr1.append("select orders_sizes.orders_id as order_id, orders_sizes.sizes_id as size_id, size.title as size ")
-                .append("from orders_sizes ")
-                .append("inner join size on size.id = orders_sizes.sizes_id ");
+
+        sizeMap = new HashMap<>();
+
+        String statement = createStatementForSizeList();
         ConnectionToDB connectionToDB = new ConnectionToDB();
-        ResultSet result1 = connectionToDB.connect(String.valueOf(statementStr1));
-        Map<Long, HashSet> sizeMap = new HashMap<>();
+        ResultSet result1 = connectionToDB.connect(statement);
         try {
             while (result1.next()) {
                 Long orderID = result1.getLong("order_id");
@@ -66,8 +61,27 @@ public class OrderRepository {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            Logger.getLogger(OrderRepository.class.getName()).log(Level.SEVERE, null, e);
         }
         return sizeMap;
     }
+
+    private String createStatementForSizeList() {
+        StringBuilder statementStr = new StringBuilder();
+        statementStr.append("select orders_sizes.orders_id as order_id, orders_sizes.sizes_id as size_id, size.title as size ")
+                .append("from orders_sizes ")
+                .append("inner join size on size.id = orders_sizes.sizes_id ");
+        return String.valueOf(statementStr);
+    }
+    private String createStatementForOrderList() {
+        StringBuilder statementStr = new StringBuilder();
+        statementStr.append("select orders.id, orders.units, orders.deadlines, ")
+                .append("material.id as material_id, material.title as material_title, ")
+                .append("types.id as type_id, types.title as type_title ")
+                .append("from orders ")
+                .append("inner join material on orders.material_id = material.id ")
+                .append("inner join types on orders.type_id = types.id ");
+        return String.valueOf(statementStr);
+    }
+
 }
