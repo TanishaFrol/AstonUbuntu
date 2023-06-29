@@ -5,7 +5,6 @@ import app.data.Order;
 import app.data.Size;
 import app.data.Type;
 import app.services.ConnectionToDB;
-import app.services.OrderService;
 import jakarta.transaction.Transactional;
 import java.sql.*;
 import java.util.*;
@@ -83,5 +82,4 @@ public class OrderRepository {
                 .append("inner join types on orders.type_id = types.id ");
         return String.valueOf(statementStr);
     }
-
 }
