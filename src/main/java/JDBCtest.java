@@ -8,7 +8,7 @@ public class JDBCtest {
     public static void main(String[] args) throws InterruptedException {
         OrderController orderController = new OrderController();
 
-        System.out.println(orderController.getOrderList());
+        //System.out.println(orderController.getOrderList());
     }
 
     private static void testConnection() {
